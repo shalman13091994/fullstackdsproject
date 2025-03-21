@@ -5,8 +5,8 @@ seaborn
 ipykernel
 Flask
 #this is more stable version
-mlflow==2.2.2
+# mlflow==2.2.2
 dvc
 apache-airflow
 
--e .
+-e . ##this will show as DiamondPricePrediction from the setup.py as package in pip
