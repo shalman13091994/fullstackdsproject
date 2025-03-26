@@ -6,7 +6,8 @@ ipykernel
 Flask
 #this is more stable version
 # mlflow==2.2.2
+mlflow
 dvc
 apache-airflow
 
--e . ##this will show as DiamondPricePrediction from the setup.py as package in pip
+-e . ##this will call setup.py file where DiamondPricePrediction from the setup.py as package in pip
