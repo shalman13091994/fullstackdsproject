@@ -13,6 +13,7 @@ import pickle
 
 @dataclass # using this dataclass we dont have to manually initialise the init  method
 class ModelTrainerConfig:
+
     modeltrainer_file_path = os.path.join('artifacts', 'model.pkl')
 
 class ModelTrainer:
@@ -93,8 +94,14 @@ class ModelTrainer:
         if best_model:
 
             print(f"\n✅ Best Model Saved: {best_model} with R² Score: {best_r2*100}")
-            
-            self.save_object(self.ModelTrainerConfig.modeltrainer_file_path, best_model)
+            # self.save_object(self.ModelTrainerConfig.modeltrainer_file_path, best_model) #this will save as model.pkl
+
+            #overriding the default model name with the dynamic model name 
+            model_file_path = os.path.join('artifacts', f"{best_model}.pkl")
+
+            self.save_object(model_file_path, best_model)
+
+
 
 
     # to save the best model
