@@ -20,8 +20,8 @@ class Log:
         log_file_path = os.path.join(self.log_path, log_file)
 
         # Write initial log entry
-        with open(log_file_path, "w") as f:
-            f.write("Log file created successfully!\n")
+        # with open(log_file_path, "w") as f:
+        #     f.write("Log file created successfully!\n")
 
         print(f"Log file created at: {log_file_path}")
 
