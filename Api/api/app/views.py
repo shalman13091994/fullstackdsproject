@@ -166,7 +166,7 @@ def customfileupload(request):
                 f.write(chunk)
 
         
-        return Response(f"The price is {finaldf_merged.head(1)}",  status=status.HTTP_200_OK) 
+        return Response(f"The price is {finaldf_merged.head(5)}",  status=status.HTTP_200_OK) 
         # return Response(f"The price is {result[0]:.2f}",  status=status.HTTP_200_OK)
 
 
