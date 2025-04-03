@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 # from api.app.urls import urlpatterns 
+
 from .app.urls import urlpatterns 
 
 
