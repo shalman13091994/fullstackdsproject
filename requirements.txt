@@ -12,4 +12,7 @@ apache-airflow
 Django
 djangorestframework 
 docker
+django-cors-headers
+django-allauth 
+
 -e . ##this will call setup.py file where DiamondPricePrediction from the setup.py as package in pip
