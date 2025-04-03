@@ -15,11 +15,21 @@ import os, json
 from datetime import datetime
 
 
-app_settings_path = os.path.join(r'D:\Datascience\fullstackdsproject\Api\appsettings.json')
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# app_settings_path = os.path.join(r'D:\Datascience\fullstackdsproject\Api\appsettings.json')
+
+# Correctly set the path for Linux containers
+app_settings_path = os.path.join(BASE_DIR, "appsettings.json")
+
+# Ensure the file exists before opening
+if not os.path.exists(app_settings_path):
+    raise FileNotFoundError(f"Settings file not found: {app_settings_path}")
 
 with open(app_settings_path, 'rb') as configfile:
+    # Load the JSON file
     config = json.load(configfile)
-  
+
 
 #for client id and tenant id
 
