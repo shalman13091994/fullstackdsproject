@@ -9,5 +9,7 @@ Flask
 mlflow
 dvc
 apache-airflow
-
+Django
+djangorestframework 
+docker
 -e . ##this will call setup.py file where DiamondPricePrediction from the setup.py as package in pip
