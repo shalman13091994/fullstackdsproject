@@ -9,7 +9,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 import numpy as np
 
-import pickle
+import pickle, joblib
 
 # def save_object(filepath, obj):
 
@@ -39,4 +39,8 @@ def evaluating_scores(true, predict):
 
 def load_object(filepath):
     with open(filepath, 'rb') as fb:
-        return pickle.load(fb)
+        
+        #due to compatibilty issue in docker scikit learn pickle is not working
+        return joblib.load(fb)
+    
+        # return pickle.load(fb)

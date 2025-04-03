@@ -9,6 +9,7 @@ import numpy as np
 from dataclasses import dataclass
 import os
 import pickle
+import joblib
 
 
 @dataclass # using this dataclass we dont have to manually initialise the init  method
@@ -25,7 +26,11 @@ class ModelTrainer:
         """Saves an object using pickle."""
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, "wb") as file_obj:
-            pickle.dump(obj, file_obj)
+            
+            #  due to scikit learn compatibilty issue in docker scikit learn pickle is not working
+            joblib.dump(obj, file_obj)
+
+            # pickle.dump(obj, file_obj)
         print(f"✅ Model saved at: {file_path}")
     
     

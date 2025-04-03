@@ -10,6 +10,7 @@ from sklearn.impute import SimpleImputer
 from dataclasses import dataclass # this have __init__ method inside just to call as decorator
 import os
 import numpy as np
+import joblib
 
 # class DataTransformationConfig:
 #     def __init__(self):
@@ -282,7 +283,11 @@ class DataTransformation:
             os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
             with open(file_path, "wb") as file_obj:
-                pickle.dump(obj, file_obj)
+
+                #due to scikit learn compatibilty issue in docker
+                joblib.dump(obj, file_obj)
+
+                # pickle.dump(obj, file_obj)
 
             logging.info(f"Object saved successfully at {file_path}")
 
