@@ -284,7 +284,7 @@ class DataTransformation:
 
             with open(file_path, "wb") as file_obj:
 
-                #due to scikit learn compatibilty issue in docker
+                #due to scikit learn compatibilty issue in docker  scikit learn pickle is not working
                 joblib.dump(obj, file_obj)
 
                 # pickle.dump(obj, file_obj)
