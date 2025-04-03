@@ -14,5 +14,20 @@ djangorestframework
 docker
 django-cors-headers
 django-allauth 
+pyodbc
+SQLAlchemy
 
 -e . ##this will call setup.py file where DiamondPricePrediction from the setup.py as package in pip
+
+
+# Steps to deploy in AWS ECR -  amazon console
+# 1.In AWS search iam user -> access management --> user -> create user and give the admin access and then copy the aws keyid and secret key
+# 2. search ERC create a repo in ERC - keep everything default n create
+# 3. after creating the ERC repo - search apprunner 
+    # 3.1 create services --> Source Repository type ->container registry, Provider -> Amzon ECR (private), Container image URI -> select repo and the Image tag 
+    # 3.2 Deployment settings --> select automatic, ECR access role - create new service role, then next --> craete service name rest keep as default n then deploy
+
+# 4. github --> settings -->secret and variables -->action -->Repository secrets --> add --> AWS_ACCESS_KEY_ID, AWS_ECR_REPO,AWS_REGION,  AWS_SECRET_ACCESS_KEY
+
+# 5. in .github ->workflows->main.yaml it should be configured so it will take from the github
+
