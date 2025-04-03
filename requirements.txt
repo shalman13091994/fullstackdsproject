@@ -36,3 +36,4 @@ SQLAlchemy
 
 # same port to be used in the aws 
 
+# if getting in built in app runner first check the imports in django views, urls try delete the services

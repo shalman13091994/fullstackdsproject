@@ -12,8 +12,18 @@ class PredictPipeline:
         pass
 
     def predict_data(self, features):
-       preprocessor_path =  os.path.join(r"D:\Datascience\fullstackdsproject\artifacts\preprocessor.pkl")
-       model_path =  os.path.join(r"D:\Datascience\fullstackdsproject\artifacts\model.pkl")
+       
+        # works on the local but aws it gives error so it has to give in below approach
+    #    preprocessor_path =  os.path.join(r"D:\Datascience\fullstackdsproject\artifacts\preprocessor.pkl")
+    #    model_path =  os.path.join(r"D:\Datascience\fullstackdsproject\artifacts\model.pkl")
+
+       # Get base directory dynamically (works in AWS)
+       BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+
+        # Use relative paths instead of absolute Windows paths
+       preprocessor_path = os.path.join(BASE_DIR, "artifacts", "preprocessor.pkl")
+       model_path = os.path.join(BASE_DIR, "artifacts", "model.pkl")
+            
        preprocessor = load_object(preprocessor_path)
        model = load_object(model_path)
        

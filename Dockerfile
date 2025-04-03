@@ -1,7 +1,7 @@
 FROM python:3.8-slim-buster
 WORKDIR /service
 
-# Install necessary system dependencies
+# Install necessary system dependencies -- for pyodbc
 RUN apt-get update && apt-get install -y \
     gnupg \
     unixodbc \
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Microsoft ODBC Driver 17 for SQL Server (if needed)
+# Install Microsoft ODBC Driver 17 for SQL Server (if needed) --  for pyodbc
 RUN curl -sSL https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
     echo "deb [arch=amd64] https://packages.microsoft.com/debian/10/prod buster main" > /etc/apt/sources.list.d/mssql-release.list && \
     apt-get update && ACCEPT_EULA=Y apt-get install -y msodbcsql17
