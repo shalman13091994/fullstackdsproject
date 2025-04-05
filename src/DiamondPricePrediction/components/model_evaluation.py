@@ -37,14 +37,14 @@ class model_evaluation:
 
         model  = load_object(model_path)
 
-        # dagshub uri
+        # dagshub uri - with digshub it will store in the digshub repo
         mlflow.set_registry_uri('https://dagshub.com/shalman13091994/fullstackdsproject.mlflow')
         
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
-        print(tracking_url_type_store) # output would be file
+        print(tracking_url_type_store) # output would be file n save it in digshub
 
        
-       #logging with the mlflow
+       #logging with the mlflow in local
         with mlflow.start_run():
         # will pass only the test data/validated data
             y_predict = model.predict(X_test)

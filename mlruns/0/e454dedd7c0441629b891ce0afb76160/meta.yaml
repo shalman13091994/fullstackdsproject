@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Datascience/fullstackdsproject/mlruns/0/e454dedd7c0441629b891ce0afb76160/artifacts
+end_time: 1743844922011
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e454dedd7c0441629b891ce0afb76160
+run_name: likeable-auk-102
+run_uuid: e454dedd7c0441629b891ce0afb76160
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743844914061
+status: 3
+tags: []
+user_id: shalman
