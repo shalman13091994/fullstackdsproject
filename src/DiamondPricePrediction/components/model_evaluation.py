@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 import mlflow, os
 from src.DiamondPricePrediction.utils.utils import evaluating_scores, load_object
-
+import dagshub
 
 class model_evaluation:
     def __init__(self):
@@ -42,8 +42,12 @@ class model_evaluation:
         
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
         print(tracking_url_type_store) # output would be file n save it in digshub
+        
+        # will get under the remote -->experiments --> using mlflow tracking
+        dagshub.init(repo_owner='shalman13091994', repo_name='fullstackdsproject', mlflow=True)
 
-       
+
+            
        #logging with the mlflow in local
         with mlflow.start_run():
         # will pass only the test data/validated data
