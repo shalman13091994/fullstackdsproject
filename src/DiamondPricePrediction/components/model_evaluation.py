@@ -38,7 +38,7 @@ class model_evaluation:
         model  = load_object(model_path)
 
         # dagshub uri
-        mlflow.set_registry_uri('https://dagshub.com/shalman13091994/fullstackdsproject.mlflow')\
+        mlflow.set_registry_uri('https://dagshub.com/shalman13091994/fullstackdsproject.mlflow')
         
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
         print(tracking_url_type_store) # output would be file
