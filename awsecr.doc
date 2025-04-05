@@ -7,7 +7,12 @@ Steps to deploy in AWS ECR - amazon console
 
 4. github --> settings -->secret and variables -->action -->Repository secrets --> add --> AWS_ACCESS_KEY_ID, AWS_ECR_REPO,AWS_REGION,  AWS_SECRET_ACCESS_KEY
 
-5. Under .github ->workflows->main.yaml it should be configured so it will take from the github
+5. Under .github ->workflows->main.yaml it should be configured so it will take from the  github
 
 #note: ENTRYPOINT [ "python3", "./Api/manage.py", "runserver", "0.0.0.0:8080"] --same port to be used in the aws 
 
+# if getting in built in app runner first check the imports in django views, urls try delete the services
+# make sure same version of libraries especially scikit-learn should be there so change the local version according to that
+# And retrain the model and save the model.pkl and preprocessor.pkl with that same version of the docker 
+# due to version mismatch of saved model.pkl and preprocessor.pkl will cause issue in the docker 
+# used this version scikit-learn==1.2.0 #local version should suits same as docker version

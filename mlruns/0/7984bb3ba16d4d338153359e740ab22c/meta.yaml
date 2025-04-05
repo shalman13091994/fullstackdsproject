@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Datascience/fullstackdsproject/mlruns/0/7984bb3ba16d4d338153359e740ab22c/artifacts
+end_time: 1743842255231
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7984bb3ba16d4d338153359e740ab22c
+run_name: nosy-dove-920
+run_uuid: 7984bb3ba16d4d338153359e740ab22c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743842255168
+status: 3
+tags: []
+user_id: shalman

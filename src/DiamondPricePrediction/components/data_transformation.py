@@ -226,7 +226,7 @@ class DataTransformation:
 
         # Categorical Pipeline
         cat_pipeline = Pipeline([
-            ('imputer', SimpleImputer(strategy='most_frequent')),
+            ('imputer', SimpleImputer(strategy='most_frequent')), #mode
             ('ordinalencoder', OrdinalEncoder(categories=[cut_categories, color_categories, clarity_categories])),
             ('scaler', StandardScaler())
         ])
@@ -264,7 +264,7 @@ class DataTransformation:
 
             logging.info("Applying preprocessing object on training and testing datasets.")
 
-            # Combine transformed features with target column
+            # Combine transformed features with target column concatenation
             train_arr = np.c_[input_feature_train_arr, np.array(target_feature_train_df)]
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 

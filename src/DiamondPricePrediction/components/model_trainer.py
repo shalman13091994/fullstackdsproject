@@ -15,7 +15,7 @@ import joblib
 @dataclass # using this dataclass we dont have to manually initialise the init  method
 class ModelTrainerConfig:
 
-    modeltrainer_file_path = os.path.join('artifacts', 'model.pkl')
+    modeltrainer_file_path = os.path.join('artifacts', 'model.pkl') #saving thr model
 
 class ModelTrainer:
     def __init__(self):
