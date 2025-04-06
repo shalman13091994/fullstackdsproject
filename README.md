@@ -17,6 +17,10 @@ git pull
 ```
 
 ```
+get an erro like src module not found set PYTHONPATH =. in cmd
+```
+
+```
 dagshub
 
 import dagshub
