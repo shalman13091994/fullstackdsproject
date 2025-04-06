@@ -135,18 +135,42 @@ However, it works as acyclic graph - DAG - Data Acyclic Graph stage1 -->stage2--
 
 commands for dvc
 
+1.git init       # if not already done
 dvc init
 
+2.Add files
 dvc add -- to add the data 
+dvc add artifacts/raw.csv
+
+git add artifacts/raw.csv.dvc .gitignore
+git commit -m "Track raw data with DVC"
+
+
 
 if the data is already remove from the git using   git rm -r --cached 'filename'
 
+also remove the deps files/pkl from the git so that it can be track by DVC
+
 once added it will under dvc -->cache -->file -->md5-->14
 
-add remote 
+4.add remote 
+
+dvc remote add -d myremote <remote-url>
+dvc remote add -d storage gdrive://<folder-id>
+dvc remote add -d storage s3://mybucket/data
+
+#local
 dvc remote add -d remote_storage path/to/your/dvc_remote
 
+5. dvc.yaml 
 
 create config in dvc.yaml with the stages and what are the files to track
+
+dvc push      # Push data to remote storage
+git add .     # Track pipeline files
+git commit -m "Added DVC pipeline"
+git push      # Push code to GitHub
+
+
 
 ```

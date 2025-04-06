@@ -1,0 +1,35 @@
+schema: '2.0'
+stages:
+  training:
+    cmd: python 
+      D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\pipelines\training_pipeline.py
+    deps:
+    - path: src\DiamondPricePrediction\components\data_ingestion.py
+      hash: md5
+      md5: 40dbfa0a78b6a97d798027dad4cd41af
+      size: 2091
+    - path: src\DiamondPricePrediction\components\data_transformation.py
+      hash: md5
+      md5: e9421075ad6267c3377b25e6702ce40e
+      size: 11363
+    - path: src\DiamondPricePrediction\components\model_evaluation.py
+      hash: md5
+      md5: 3d2bdd760eaf0afbb343886d965cc8bb
+      size: 7896
+    - path: src\DiamondPricePrediction\components\model_trainer.py
+      hash: md5
+      md5: 91875f48266d585e2f654a7324190b33
+      size: 4341
+    outs:
+    - path: artifacts\LinearRegression().pkl
+      hash: md5
+      md5: 85414ac2cb7f0370770792b8e7803c93
+      size: 672
+    - path: artifacts\digshub_output_with_prediction.csv
+      hash: md5
+      md5: 166dbc03bbca8cd37b6ec4a965a5d496
+      size: 12915182
+    - path: artifacts\preprocessor.pkl
+      hash: md5
+      md5: a59d1403c99e16ad822c97cbed1726c3
+      size: 5131
