@@ -1,0 +1,18 @@
+stages:
+  training:
+    cmd: python D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\pipelines\training_pipeline.py
+    deps:
+      - D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\components\data_ingestion.py
+      - D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\components\data_transformation.py
+      - D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\components\model_trainer.py
+      - D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\components\model_evaluation.py
+      
+    outs:
+      - D:\Datascience\fullstackdsproject\artifacts\raw.csv
+      - D:\Datascience\fullstackdsproject\artifacts\train.csv
+      - D:\Datascience\fullstackdsproject\artifacts\test.csv
+      - D:\Datascience\fullstackdsproject\artifacts\raw.csv
+      - D:\Datascience\fullstackdsproject\artifacts\LinearRegression().pkl
+      - D:\Datascience\fullstackdsproject\artifacts\preprocessor.pkl
+      - D:\Datascience\fullstackdsproject\artifacts\digshub_output_with_prediction.csv
+

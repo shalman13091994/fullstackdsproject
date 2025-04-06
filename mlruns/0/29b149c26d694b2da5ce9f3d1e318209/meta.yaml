@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Datascience/fullstackdsproject/mlruns/0/29b149c26d694b2da5ce9f3d1e318209/artifacts
+end_time: 1743847349438
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 29b149c26d694b2da5ce9f3d1e318209
+run_name: omniscient-toad-955
+run_uuid: 29b149c26d694b2da5ce9f3d1e318209
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743847344489
+status: 3
+tags: []
+user_id: shalman

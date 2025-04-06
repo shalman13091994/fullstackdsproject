@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Datascience/fullstackdsproject/mlruns/0/007f0a0abff44d619e7c0a9ab12cec69/artifacts
+end_time: 1743846874512
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 007f0a0abff44d619e7c0a9ab12cec69
+run_name: placid-shrew-195
+run_uuid: 007f0a0abff44d619e7c0a9ab12cec69
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743846869351
+status: 3
+tags: []
+user_id: shalman

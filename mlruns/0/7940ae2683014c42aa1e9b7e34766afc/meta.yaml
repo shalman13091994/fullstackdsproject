@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Datascience/fullstackdsproject/mlruns/0/7940ae2683014c42aa1e9b7e34766afc/artifacts
+end_time: 1743847279529
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7940ae2683014c42aa1e9b7e34766afc
+run_name: big-lynx-534
+run_uuid: 7940ae2683014c42aa1e9b7e34766afc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743847270904
+status: 3
+tags: []
+user_id: shalman
