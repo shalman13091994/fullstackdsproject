@@ -11,7 +11,7 @@ stages:
       # - D:\Datascience\fullstackdsproject\artifacts\raw.csv
       # - D:\Datascience\fullstackdsproject\artifacts\train.csv
       # - D:\Datascience\fullstackdsproject\artifacts\test.csv
-      - D:\Datascience\fullstackdsproject\artifacts\LinearRegression().pkl
-      - D:\Datascience\fullstackdsproject\artifacts\preprocessor.pkl
+      - D:\Datascience\fullstackdsproject\artifacts\LinearRegression().pkl # these canbe track better in mlflow
+      - D:\Datascience\fullstackdsproject\artifacts\preprocessor.pkl # these canbe track better in mlflow
       - D:\Datascience\fullstackdsproject\artifacts\digshub_output_with_prediction.csv
 

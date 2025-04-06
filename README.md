@@ -17,7 +17,7 @@ git pull
 ```
 
 ```
-get an erro like src module not found set PYTHONPATH =. in cmd
+if error is like src module not found set PYTHONPATH =. in cmd
 ```
 
 ```
@@ -143,19 +143,17 @@ commands for dvc
 dvc init
 
 2.Add files
-dvc add -- to add the data 
+dvc add -- to add the file 
 dvc add artifacts/raw.csv
 
+then add in .dvc track changes
 git add artifacts/raw.csv.dvc .gitignore
 git commit -m "Track raw data with DVC"
 
-
-
-if the data is already remove from the git using   git rm -r --cached 'filename'
-
-also remove the deps files/pkl from the git so that it can be track by DVC
-
-once added it will under dvc -->cache -->file -->md5-->14
+note:
+    if the data is already remove from the git using   git rm -r --cached 'filename'
+    also remove the deps files/pkl from the git so that it can be track by DVC
+    once added it will under dvc -->cache -->file -->md5-->14
 
 4.add remote 
 

@@ -25,7 +25,7 @@ class model_evaluation:
     def initiate_evaluation(self, train_arr, test_arr):
        
      
-       # load the data
+       # load the data which comes from the data transformation.py class
         X_train, y_train, X_test, y_test = (
             train_arr[:,:-1],
             train_arr[:, -1], 

@@ -1,3 +1,6 @@
 /LinearRegression().pkl
 /preprocessor.pkl
 /digshub_output_with_prediction.csv
+/raw.csv
+/test.csv
+/train.csv
