@@ -173,6 +173,9 @@ git add .     # Track pipeline files
 git commit -m "Added DVC pipeline"
 git push      # Push code to GitHub
 
-
+Behavior during dvc repro:
+Before re-running the stage (cmd:), DVC will remove the existing output files listed under outs: (if they exist).
+so dvc will delete and create the files so basically files will be deleted
+DVC ensures that the pipeline is reproducible and always reflects the latest outputs
 
 ```

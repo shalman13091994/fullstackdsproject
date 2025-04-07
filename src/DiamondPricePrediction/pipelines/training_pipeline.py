@@ -1,9 +1,14 @@
-from src.DiamondPricePrediction.components.data_ingestion import *
-from src.DiamondPricePrediction.components.data_transformation import *
-from src.DiamondPricePrediction.components.model_trainer import *
-from src.DiamondPricePrediction.components.model_evaluation import *
 
-from src.DiamondPricePrediction.utils.utils import evaluating_scores
+import sys
+import os
+sys.path.append(os.path.join(os.getcwd(), "src"))
+
+from DiamondPricePrediction.components.data_ingestion import *
+from DiamondPricePrediction.components.data_transformation import *
+from DiamondPricePrediction.components.model_trainer import *
+from DiamondPricePrediction.components.model_evaluation import *
+
+from DiamondPricePrediction.utils.utils import evaluating_scores
 
 data_ingestion = DataIngestion()
 data_ingestion.initiate_dataingestion()

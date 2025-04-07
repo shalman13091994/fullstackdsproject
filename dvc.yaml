@@ -1,17 +1,25 @@
 stages:
   training:
-    cmd: python D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\pipelines\training_pipeline.py
+    cmd: python src/DiamondPricePrediction/pipelines/training_pipeline.py
     deps:
-      - D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\components\data_ingestion.py
-      - D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\components\data_transformation.py
-      - D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\components\model_trainer.py
-      - D:\Datascience\fullstackdsproject\src\DiamondPricePrediction\components\model_evaluation.py
-      
-    outs:
-      # - D:\Datascience\fullstackdsproject\artifacts\raw.csv
-      # - D:\Datascience\fullstackdsproject\artifacts\train.csv
-      # - D:\Datascience\fullstackdsproject\artifacts\test.csv
-      - D:\Datascience\fullstackdsproject\artifacts\LinearRegression().pkl # these canbe track better in mlflow
-      - D:\Datascience\fullstackdsproject\artifacts\preprocessor.pkl # these canbe track better in mlflow
-      - D:\Datascience\fullstackdsproject\artifacts\digshub_output_with_prediction.csv
+      - src/DiamondPricePrediction/components/data_ingestion.py
+      - src/DiamondPricePrediction/components/data_transformation.py
+      - src/DiamondPricePrediction/components/model_trainer.py
+      - src/DiamondPricePrediction/components/model_evaluation.py
+      - artifacts/raw.csv           # raw.csv is input, so it's a dependency 
+      # if want to track this add this separtely dvc add
 
+    
+    #Behavior during dvc repro:
+    # Before re-running the stage (cmd:), DVC will remove the existing output files listed under outs: (if they exist).
+
+    # so dvc will delete and create the files so basically files will be deleted
+
+    #  DVC ensures that the pipeline is reproducible and always reflects the latest outputs
+
+    outs:
+      - artifacts/train.csv         # train & test are outputs, so tracked here
+      - artifacts/test.csv
+      - artifacts/LinearRegression().pkl #models/pkls should be stored in mlflow 
+      - artifacts/preprocessor.pkl
+      - artifacts/digshub_output_with_prediction.csv

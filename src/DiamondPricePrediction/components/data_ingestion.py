@@ -5,8 +5,10 @@ import sqlalchemy as sq
 from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
 
-from src.DiamondPricePrediction.exception import CustomException
-from src.DiamondPricePrediction.logger import logging
+
+
+from DiamondPricePrediction.exception import CustomException
+from DiamondPricePrediction.logger import logging
 
 #setting up the file path under the artificats
 #always create a config
@@ -16,9 +18,9 @@ from sklearn.model_selection import train_test_split
 
 
 class DataIngestionConfig:
-    raw_data_path = os.path.join(r'..\artifacts', 'raw.csv')
-    train_data_path = os.path.join(r'..\artifacts', 'train.csv')
-    test_data_path = os.path.join(r'..\artifacts', 'test.csv')
+    raw_data_path = os.path.join(r'artifacts', 'raw.csv')
+    train_data_path = os.path.join(r'artifacts', 'train.csv')
+    test_data_path = os.path.join(r'artifacts', 'test.csv')
 
    
 

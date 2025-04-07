@@ -1,8 +1,8 @@
 #model training
-from src.DiamondPricePrediction.components.data_transformation import DataTransformation
+from DiamondPricePrediction.components.data_transformation import DataTransformation
 from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from src.DiamondPricePrediction.utils.utils import evaluating_scores
+from DiamondPricePrediction.utils.utils import evaluating_scores
 
 
 import numpy as np

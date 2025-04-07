@@ -1,11 +1,11 @@
 from urllib.parse import urlparse
-from src.DiamondPricePrediction.components.data_transformation import DataTransformation
+from DiamondPricePrediction.components.data_transformation import DataTransformation
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 import pandas as pd
 import numpy as np
 import mlflow, os
-from src.DiamondPricePrediction.utils.utils import evaluating_scores, load_object
+from DiamondPricePrediction.utils.utils import evaluating_scores, load_object
 import dagshub
 
 from mlflow.models.signature import infer_signature

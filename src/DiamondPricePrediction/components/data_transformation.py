@@ -3,7 +3,7 @@
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder
 from sklearn.pipeline import Pipeline
-from src.DiamondPricePrediction.components.data_ingestion import *
+from DiamondPricePrediction.components.data_ingestion import *
 from sklearn.impute import SimpleImputer
 # from src.DiamondPricePrediction.utils.utils import save_object
 
